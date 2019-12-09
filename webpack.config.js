@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   plugins: [
     new CopyWebpackPlugin([
-      path.join(__dirname, 'dll', 'angular-dll-es2015.js')
+      path.join(__dirname, 'dll', 'angular-dll-es5.js')
     ]),
     new webpack.DllReferencePlugin({
       context: __dirname,

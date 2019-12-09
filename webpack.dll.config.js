@@ -22,7 +22,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, "./dll"),
-        filename: "[name]-dll-es2015.js",
+        filename: "[name]-dll-es5.js",
         library: "[name]"
     },
     plugins: [

@@ -65,7 +65,7 @@
 			"description": "Remove content hash from webpack bundles and CSS",
 			"test": "",
 			"include": [
-				"^dist/[^/]+/.*-es2015.*\\.js$",
+				"^dist/[^/]+/.*-es5.*\\.js$",
 				"^dist/[^/]+/styles.*\\.css$"
 			],
 			"use": ["liferay-npm-build-support/lib/loader/remove-webpack-hash"]
