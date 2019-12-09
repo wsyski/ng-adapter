@@ -18,7 +18,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./custom-webpack.config.js",
+              "path": "./webpack.config.js",
               "replaceDuplicatePlugins": false
             },
             "outputPath": "dist/ng-adapter",
@@ -73,7 +73,7 @@
           "options": {
             "browserTarget": "ng-adapter:build",
             "customWebpackConfig": {
-              "path": "./custom-webpack.config.js",
+              "path": "./webpack.config.js",
               "replaceDuplicatePlugins": true
             }
           },
