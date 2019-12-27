@@ -9,8 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:dll": "webpack --config ./webpack.dll.config.js",
-    "build:liferay": "lnbs-build",
-    "deploy:liferay": "lnbs-deploy"
   },
   "private": true,
   "dependencies": {
