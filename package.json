@@ -54,13 +54,5 @@
     "webpack-bundle-analyzer": "~3.6.0",
     "webpack-cli": "~3.3.10",
     "webpack-dll-ng-module-loader": "~1.2.0"
-  },
-  "portlet": {
-    "com.liferay.portlet.display-category": "category.sample",
-    "javax.portlet.name": "ngadapter",
-    "javax.portlet.security-role-ref": "power-user,user",
-    "javax.portlet.resource-bundle": "content.Language",
-    "com.liferay.portlet.instanceable": false,
-    "com.liferay.portlet.header-portlet-css": "/ng-adapter/styles.css"
   }
 }
