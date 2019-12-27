@@ -4,11 +4,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   plugins: [
     new CopyWebpackPlugin([
-      path.join(__dirname, 'dll', 'angular-dll-es5.js')
+      path.join(__dirname, 'dll', 'common-dll-es5.js')
     ]),
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require(path.join(__dirname, 'dll', 'angular-manifest.json'))
+      manifest: require(path.join(__dirname, 'dll', 'common-manifest.json'))
     }),
   ]
 };
