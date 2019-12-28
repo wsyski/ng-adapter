@@ -8,27 +8,25 @@ module.exports = {
     noEmitOnErrors: true
   },
   entry: {
-    common: [
+    vendor: [
       "@angular/animations",
       "@angular/common",
-      "@angular/compiler",
       "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
       "@angular/router",
-      "rxjs",
-      "tslib"
+      "rxjs"
     ]
   },
   output: {
-    path: path.join(__dirname, "./dll"),
-    filename: "[name]-dll-es5.js",
+    path: path.join(__dirname, 'dll'),
+    filename: "[name].js",
     library: "[name]"
   },
   plugins: [
     new webpack.DllPlugin({
-      path: path.join(__dirname, "./dll/", "[name]-manifest.json"),
+      path: path.resolve("dll", "[name]-manifest.json"),
       name: "[name]"
     })
   ]
