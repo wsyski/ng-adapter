@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "lnbs-start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:dll": "webpack --config ./webpack.dll.config.js",
-    "build:liferay": "lnbs-build",
-    "deploy:liferay": "npm run build:liferay && lnbs-deploy"
+    "build:dll": "webpack --config ./webpack.dll.config.js"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +20,8 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "rxjs": "~6.4.0",
-    "tslib": "~1.10.0",
-    "zone.js": "~0.10.2"
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "~8.4.1",

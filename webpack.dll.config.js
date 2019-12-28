@@ -10,14 +10,15 @@ module.exports = {
   entry: {
     common: [
       "@angular/animations",
-      "@angular/core",
       "@angular/common",
       "@angular/compiler",
+      "@angular/core",
       "@angular/forms",
-      "@angular/router",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
-      "rxjs"
+      "@angular/router",
+      "rxjs",
+      "tslib"
     ]
   },
   output: {

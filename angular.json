@@ -19,7 +19,9 @@
           "options": {
             "customWebpackConfig": {
               "path": "./webpack.config.js",
-              "replaceDuplicatePlugins": false
+              "mergeStrategies": {
+                "externals": "replace"
+              }
             },
             "outputPath": "dist/ng-adapter",
             "index": "src/index.html",
@@ -73,8 +75,7 @@
           "options": {
             "browserTarget": "ng-adapter:build",
             "customWebpackConfig": {
-              "path": "./webpack.config.js",
-              "replaceDuplicatePlugins": true
+              "path": "./webpack.config.js"
             }
           },
           "configurations": {
