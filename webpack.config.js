@@ -17,7 +17,7 @@ module.exports = (config, options) => {
 
   config.plugins.push(
     new CopyWebpackPlugin([
-      path.resolve(__dirname, 'dll', 'vendor-dll-es5.js')
+      path.resolve(__dirname, 'dll', 'vendor-es5.js')
     ])
   );
 
