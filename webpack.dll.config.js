@@ -8,10 +8,8 @@ module.exports = {
     noEmitOnErrors: true
   },
   entry: {
-    polyfills: [
-      'zone.js/dist/zone'
-    ],
-    runtime: [
+    vendor: [
+      'zone.js/dist/zone',
       "@angular/animations",
       "@angular/common",
       "@angular/core",
