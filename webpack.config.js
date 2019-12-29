@@ -21,10 +21,10 @@ module.exports = (config, options) => {
 
   config.plugins.push(
     new CopyWebpackPlugin([
-      path.resolve(__dirname, 'dll', 'polyfills-dll.js')
+      path.resolve(__dirname, 'dll', 'polyfills-dll-es5.js')
     ]),
     new CopyWebpackPlugin([
-      path.resolve(__dirname, 'dll', 'vendor-dll.js')
+      path.resolve(__dirname, 'dll', 'vendor-dll-es5.js')
     ])
   );
 
