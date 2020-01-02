@@ -9,9 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:dll": "webpack --config ./webpack.dll.config.js"
+    "build:dll": "webpack --config ./webpack.dll.config.js",
+    "build:liferay": "lnbs-build",
+    "deploy:liferay": "lnbs-deploy"
   },
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
@@ -27,7 +30,7 @@
   "devDependencies": {
     "@angular-builders/custom-webpack": "~8.4.1",
     "@angular-devkit/build-angular": "~0.803.20",
-    "@angular/cli": "~8.3.20",
+    "@angular/cli": "~8.3.21",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "@types/jasmine": "~3.3.8",
@@ -35,7 +38,7 @@
     "@types/node": "~8.9.4",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.0",
-    "copy-webpack-plugin": "~4.6.0",
+    "copy-webpack-plugin": "~5.1.1",
     "http-server": "^0.12.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -44,9 +47,9 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "~1.4.2",
-    "liferay-npm-build-support": "^2.16.2",
-    "liferay-npm-bundler": "^2.16.2",
-    "liferay-npm-bundler-preset-angular-cli": "^2.16.2",
+    "liferay-npm-build-support": "^2.17.0",
+    "liferay-npm-bundler": "^2.17.0",
+    "liferay-npm-bundler-preset-angular-cli": "^2.17.0",
     "protractor": "~5.4.0",
     "ts-loader": "^6.2.1",
     "ts-node": "~7.0.0",
@@ -56,5 +59,13 @@
     "webpack-bundle-analyzer": "~3.6.0",
     "webpack-cli": "~3.3.10",
     "webpack-dev-server": "~3.10.1"
+  },
+  "portlet": {
+    "com.liferay.portlet.display-category": "category.sample",
+    "javax.portlet.name": "ngadapter",
+    "javax.portlet.security-role-ref": "power-user,user",
+    "javax.portlet.resource-bundle": "content.Language",
+    "com.liferay.portlet.instanceable": false,
+    "com.liferay.portlet.header-portlet-css": "/ng-adapter/styles.css"
   }
 }
