@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "build:dll": "webpack --config ./webpack.dll.config.js",
     "build:liferay": "lnbs-build",
-    "deploy:liferay": "npm run build:liferay && lnbs-deploy"
+    "deploy:liferay": "lnbs-deploy"
   },
   "private": true,
   "main": "index.js",
