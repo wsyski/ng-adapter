@@ -8,6 +8,13 @@
       "**/*"
     ]
   },
+  "config": {
+    "imports": {
+      "": {
+        "portlet-dll": "1.0.0"
+      }
+    }
+  },
   "sources": [
     "package.json",
     "dist",
@@ -113,5 +120,8 @@
     "features": {
       "js-extender": true
     }
-  }
+  },
+  "dump-report": true,
+  "process-serially": false,
+  "verbose": true
 }
