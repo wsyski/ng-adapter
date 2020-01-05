@@ -7,7 +7,7 @@ const pkg = require("./package.json");
 module.exports = (config, options) => {
 
   config.resolve = {
-      modules: ['node_modules', path.resolve(__dirname)]
+    modules: ['node_modules', path.resolve(__dirname)]
   };
 
   config.plugins.push(
@@ -20,6 +20,9 @@ module.exports = (config, options) => {
   config.plugins.push(
     new CopyWebpackPlugin([
       path.join(__dirname, 'dll', pkg.name, entryName + '-dll.js')
+    ]),
+    new CopyWebpackPlugin([
+      path.join(__dirname, 'dev', 'js', 'liferay.js')
     ])
   );
 

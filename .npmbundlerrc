@@ -64,13 +64,6 @@
         {
           "loader": "liferay-npm-build-support/lib/loader/replace-regexp",
           "options": {
-            "pattern": "\"app-root\"",
-            "replacement": "\"#\"+_LIFERAY_PARAMS_.portletElementId"
-          }
-        },
-        {
-          "loader": "liferay-npm-build-support/lib/loader/replace-regexp",
-          "options": {
             "pattern": "module.exports = function\\(_LIFERAY_PARAMS_, _ADAPT_RT_\\)",
             "replacement": "module.exports = function(_LIFERAY_PARAMS_, _ADAPT_RT_, portlet)"
           }
