@@ -1,7 +1,6 @@
 import {Injectable, StaticProvider} from '@angular/core';
 import LiferayParams from '../types/LiferayParams';
 
-@Injectable()
 export class LiferayParamsProvider {
   constructor(private liferayParams: LiferayParams) {
   }

@@ -10,7 +10,6 @@ module.exports = {
   },
   entry: {
     portlet: [
-      "zone.js/dist/zone",
       "@angular/animations",
       "@angular/common",
       "@angular/core",
@@ -18,7 +17,9 @@ module.exports = {
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
       "@angular/router",
-      "rxjs"
+      "rxjs",
+      "tslib",
+      "zone.js/dist/zone"
     ]
   },
   output: {
