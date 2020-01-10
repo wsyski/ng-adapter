@@ -16,7 +16,6 @@ module.exports = {
     portlet: [
       "@angular/animations",
       "@angular/common",
-      "@angular/compiler",
       "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
