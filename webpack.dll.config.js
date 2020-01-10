@@ -4,6 +4,10 @@ const pkg = require("./package.json");
 
 module.exports = {
   mode: "development",
+  context: process.cwd(),
+  resolve: {
+    modules: [__dirname, 'node_modules']
+  },
   optimization: {
     minimize: false,
     noEmitOnErrors: true
@@ -12,13 +16,13 @@ module.exports = {
     portlet: [
       "@angular/animations",
       "@angular/common",
+      "@angular/compiler",
       "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
       "@angular/router",
-      "rxjs",
-      "tslib",
+      'rxjs',
       "zone.js/dist/zone"
     ]
   },
@@ -30,8 +34,12 @@ module.exports = {
   plugins: [
     new webpack.DllPlugin({
       path: path.join("dll", pkg.name, "[name]-dll-manifest.json"),
-      entryOnly: true,
-      name: "[name]"
-    })
+      name: "[name]",
+      entryOnly: true
+    }),
+    new webpack.ContextReplacementPlugin(
+      /\@angular(\\|\/)core(\\|\/)fesm5/,
+      path.join(__dirname, './src')
+    )
   ]
 };
