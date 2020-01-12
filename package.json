@@ -64,7 +64,7 @@
     "javax.portlet.name": "ngadapter",
     "javax.portlet.security-role-ref": "power-user,user",
     "javax.portlet.resource-bundle": "content.Language",
-    "com.liferay.portlet.instanceable": false,
+    "com.liferay.portlet.instanceable": true,
     "com.liferay.portlet.header-portlet-css": "/ng-adapter/styles.css"
   }
 }
