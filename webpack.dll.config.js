@@ -31,14 +31,14 @@ module.exports = {
     library: "[name]"
   },
   plugins: [
+    new webpack.ContextReplacementPlugin(
+      /\@angular(\\|\/)core(\\|\/)fesm5/,
+      path.join(__dirname, './src')
+    ),
     new webpack.DllPlugin({
       path: path.join("dll", pkg.name, "[name]-dll-manifest.json"),
       name: "[name]",
       entryOnly: true
-    }),
-    new webpack.ContextReplacementPlugin(
-      /\@angular(\\|\/)core(\\|\/)fesm5/,
-      path.join(__dirname, './src')
-    )
+    })
   ]
 };
